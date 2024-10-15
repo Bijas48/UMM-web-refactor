@@ -11,7 +11,7 @@ const isMenuOpen = ref(false)
     </div>
 
     <!-- Hamburger icon -->
-    <label
+    <button
       for="menu-toggle"
       class="pointer-cursor md:hidden block"
       @click="isMenuOpen = !isMenuOpen"
@@ -26,16 +26,19 @@ const isMenuOpen = ref(false)
         <title>menu</title>
         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
       </svg>
-    </label>
+    </button>
 
     <!-- Responsive menu -->
     <div
       :class="isMenuOpen ? 'block' : 'hidden'"
-      class="md:flex md:items-center md:w-auto w-full"
+      class="md:flex md:items-center md:w-auto w-full absolute top-14 left-0 bg-black z-50 md:static"
       id="menu"
     >
       <nav>
-        <ul class="md:flex items-center justify-between text-base text-gray-300 pt-4 md:pt-0">
+        <ul
+          class="md:flex items-center justify-between text-base text-gray-300 pt-4 md:pt-0 ml-4 md:ml-0"
+        >
+          <!-- Margin-left added only for small devices -->
           <li>
             <a
               href="home.html"
@@ -45,7 +48,7 @@ const isMenuOpen = ref(false)
           </li>
           <li>
             <a
-              href="about.ml"
+              href="about.html"
               class="hover:text-white md:p-4 py-3 px-0 block transition duration-500 ease-in-out"
               >About</a
             >
