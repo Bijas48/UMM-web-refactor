@@ -40,7 +40,7 @@
     <hr class="border-gray-700 my-4" />
     <footer class="bg-black">
       <div class="container mx-auto">
-        <div class="flex justify-center md:justify-between items-center py-4">
+        <div class="flex justify-center md:justify-between items-center py-4 px-5">
           <div>
             <p class="text-gray-300">
               &copy; 2024&nbsp;<a href="/" class="text-gray-400 hover:underline">UMM</a>, All Rights
