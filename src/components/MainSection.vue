@@ -36,9 +36,9 @@ import mainPhoto3 from '@/assets/images/HomeView/index3.jpg'
             <div class="team-image relative">
               <img :src="mainPhoto1" alt="Client Photo" class="w-full object-cover rounded-lg" />
               <div
-                class="team-detail absolute inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center text-white"
+                class="team-detail absolute inset-0 hover:bg-gray-800 hover:bg-opacity-50 flex justify-center items-center text-white"
               >
-                <h5 class="text-xl font-alt">OUR CLIENT</h5>
+                <h5 class="text-xl font-alt border">OUR CLIENT</h5>
               </div>
             </div>
             <div class="team-descr text-center mt-4">
