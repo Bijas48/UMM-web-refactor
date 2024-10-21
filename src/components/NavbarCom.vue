@@ -5,7 +5,9 @@ const isMenuOpen = ref(false)
 </script>
 
 <template>
-  <header class="lg:px-16 px-4 bg-black text-white flex flex-wrap items-center py-4 shadow-md">
+  <header
+    class="sticky lg:px-16 px-4 bg-black text-white flex flex-wrap items-center py-4 shadow-md"
+  >
     <div class="flex-1 flex justify-between items-center">
       <a href="#" class="text-xl">UMM</a>
     </div>
@@ -41,35 +43,35 @@ const isMenuOpen = ref(false)
           <!-- Margin-left added only for small devices -->
           <li>
             <a
-              href="home.html"
+              href="/"
               class="hover:text-white md:p-4 py-3 px-0 block transition duration-500 ease-in-out"
               >Home</a
             >
           </li>
           <li>
             <a
-              href="about.html"
+              href="about"
               class="hover:text-white md:p-4 py-3 px-0 block transition duration-500 ease-in-out"
               >About</a
             >
           </li>
           <li>
             <a
-              href="awards.html"
+              href="awards"
               class="hover:text-white md:p-4 py-3 px-0 block transition duration-500 ease-in-out"
               >Awards</a
             >
           </li>
           <li>
             <a
-              href="performance.html"
+              href="performance"
               class="hover:text-white md:p-4 py-3 px-0 block transition duration-500 ease-in-out"
               >Performance</a
             >
           </li>
           <li>
             <a
-              href="magazine.html"
+              href="magazine"
               class="hover:text-white md:p-4 py-3 px-0 block transition duration-500 ease-in-out md:mb-0 mb-2"
               >Magazine</a
             >

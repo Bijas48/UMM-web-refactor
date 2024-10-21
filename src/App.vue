@@ -1,7 +1,9 @@
 <script setup>
-import HomeView from './views/HomeView.vue'
+import NavbarCom from '@/components/NavbarCom.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <HomeView />
+  <NavbarCom />
+  <RouterView />
 </template>
