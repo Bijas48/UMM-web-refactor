@@ -1,6 +1,7 @@
 <script setup>
 import FooterCom from '@/components/FooterCom.vue'
 import HeroSectionforPages from '@/components/HeroSectionforPages.vue'
+import section1Image from '@/assets/images/AboutView/section-1.jpg'
 </script>
 
 <template>
@@ -9,20 +10,23 @@ import HeroSectionforPages from '@/components/HeroSectionforPages.vue'
     :src-image="'AboutView/header-bg.jpg'"
     :overlay="true"
   />
-  <section>
-    <div>
+  <section class="py-16">
+    <div class="container mx-auto">
       <div class="w-full">
         <h2 class="text-3xl font-semibold text-center">TEAM OF MANAGEMENT</h2>
         <!-- Gambar dummy -->
-        <img
+        <!-- <img
           src="https://via.placeholder.com/1200x600"
           class="w-full h-auto"
           alt="Management Team Image"
+        /> -->
+        <img
+          :src="section1Image"
+          class="w-full h-[50vh] md:h-[50%] object-cover px-8"
+          alt="Management Team Image"
         />
       </div>
-    </div>
 
-    <div>
       <div class="w-full">
         <h2 class="text-3xl font-semibold text-left">Overview</h2>
         <div class="text-base font-serif">
@@ -38,9 +42,7 @@ import HeroSectionforPages from '@/components/HeroSectionforPages.vue'
           </p>
         </div>
       </div>
-    </div>
 
-    <div>
       <div class="w-full">
         <h2 class="text-3xl font-semibold text-left">Mission & Vision</h2>
         <div class="text-base font-serif text-left mt-4">
