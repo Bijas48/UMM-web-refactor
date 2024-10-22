@@ -1,5 +1,6 @@
 <script setup>
 import productGif from '@/assets/images/HomeView/index5.gif'
+import { Icon } from '@iconify/vue'
 </script>
 
 <template>
@@ -10,31 +11,26 @@ import productGif from '@/assets/images/HomeView/index5.gif'
         <h2 class="text-3xl font-bold mb-4">Product Specification</h2>
         <div class="text-lg font-serif mb-8"></div>
       </div>
-      <!-- Scroll Arrow -->
-      <div class="flex justify-center mb-12">
-        <a href="#updates" class="text-3xl">
-          <i class="fa fa-angle-down"></i>
-          <!-- font awesome font -->
-        </a>
-      </div>
       <!-- Features Row -->
       <div class="flex flex-wrap justify-between">
         <!-- Left Column -->
         <div class="w-full md:w-1/3 lg:w-1/4">
-          <div class="mb-8">
-            <div class="text-5xl mb-4">
-              <i class="icon-map-pin"></i>
+          <div class="flex flex-col md:flex-row items-center mb-4">
+            <div class="text-4xl md:mr-4 mb-2 md:mb-0">
+              <Icon icon="et:map-pin" class="w-10 h-10" />
+              <!-- Set fixed size for icons -->
             </div>
-            <p class="text-justify px-5">
+            <p class="text-justify text-sm px-5">
               Our product is originated from its source in South Sumatera, Jambi, South Kalimantan,
               East Kalimantan, Bengkulu, Indonesia.
             </p>
           </div>
-          <div>
-            <div class="text-5xl mb-4">
-              <i class="icon-lightbulb"></i>
+          <div class="flex flex-col md:flex-row items-center mb-4">
+            <div class="text-4xl md:mr-4 mb-2 md:mb-0">
+              <Icon icon="et:lightbulb" class="w-10 h-10" />
+              <!-- Set fixed size for icons -->
             </div>
-            <p class="text-justify px-5">
+            <p class="text-justify text-sm px-5">
               Our product is suitable for electrical power generator as well for industrial
               consumption, cement industry and chemical.
             </p>
@@ -48,20 +44,22 @@ import productGif from '@/assets/images/HomeView/index5.gif'
         </div>
         <!-- Right Column -->
         <div class="w-full md:w-1/3 lg:w-1/4">
-          <div class="mb-8">
-            <div class="text-5xl mb-4">
-              <i class="icon-global"></i>
+          <div class="flex flex-col md:flex-row items-center mb-4">
+            <div class="text-4xl md:mr-4 mb-2 md:mb-0">
+              <Icon icon="et:global" class="w-10 h-10" />
+              <!-- Set fixed size for icons -->
             </div>
-            <p class="text-justify px-5">
+            <p class="text-justify text-sm px-5">
               Indonesia is our biggest market. This is proven by the long-term contracts with our
               clients.
             </p>
           </div>
-          <div>
-            <div class="text-5xl mb-4">
-              <i class="icon-linegraph"></i>
+          <div class="flex flex-col md:flex-row items-center mb-4">
+            <div class="text-4xl md:mr-4 mb-2 md:mb-0">
+              <Icon icon="et:linegraph" class="w-10 h-10" />
+              <!-- Set fixed size for icons -->
             </div>
-            <p class="text-justify px-5">
+            <p class="text-justify text-sm px-5">
               We always motivate ourselves to constantly improve the quality of our product and
               services in order to better meet our respected clients demand.
             </p>
