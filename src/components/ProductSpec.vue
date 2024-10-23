@@ -8,7 +8,7 @@ import { Icon } from '@iconify/vue'
     <div class="container mx-auto">
       <!-- Title and Subtitle -->
       <div class="flex flex-col items-center">
-        <h2 class="text-3xl font-bold mb-4">Product Specification</h2>
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Product Specification</h2>
         <div class="text-lg font-serif mb-8"></div>
       </div>
       <!-- Features Row -->
@@ -20,7 +20,7 @@ import { Icon } from '@iconify/vue'
               <Icon icon="et:map-pin" class="w-10 h-10" />
               <!-- Set fixed size for icons -->
             </div>
-            <p class="text-justify text-sm px-5">
+            <p class="text-justify text-sm font-serif px-5">
               Our product is originated from its source in South Sumatera, Jambi, South Kalimantan,
               East Kalimantan, Bengkulu, Indonesia.
             </p>
@@ -30,7 +30,7 @@ import { Icon } from '@iconify/vue'
               <Icon icon="et:lightbulb" class="w-10 h-10" />
               <!-- Set fixed size for icons -->
             </div>
-            <p class="text-justify text-sm px-5">
+            <p class="text-justify text-sm font-serif px-5">
               Our product is suitable for electrical power generator as well for industrial
               consumption, cement industry and chemical.
             </p>
@@ -51,7 +51,7 @@ import { Icon } from '@iconify/vue'
               <Icon icon="et:global" class="w-10 h-10" />
               <!-- Set fixed size for icons -->
             </div>
-            <p class="text-justify text-sm px-5">
+            <p class="text-justify text-sm font-serif px-5">
               Indonesia is our biggest market. This is proven by the long-term contracts with our
               clients.
             </p>
@@ -61,7 +61,7 @@ import { Icon } from '@iconify/vue'
               <Icon icon="et:linegraph" class="w-10 h-10" />
               <!-- Set fixed size for icons -->
             </div>
-            <p class="text-justify text-sm px-5">
+            <p class="text-justify text-sm font-serif px-5">
               We always motivate ourselves to constantly improve the quality of our product and
               services in order to better meet our respected clients demand.
             </p>

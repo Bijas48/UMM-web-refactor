@@ -1,6 +1,4 @@
 <script setup>
-import { defineProps } from 'vue'
-
 defineProps({
   subHeader: {
     type: String,
@@ -12,7 +10,7 @@ defineProps({
   },
   overlay: {
     type: Boolean,
-    default: true
+    default: false
   }
 })
 </script>

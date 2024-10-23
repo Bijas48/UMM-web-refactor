@@ -1,5 +1,11 @@
-<script setup></script>
+<script setup>
+import HeroSectionforPages from '@/components/HeroSectionforPages.vue'
+</script>
 
 <template>
-  <h1>Testing Awards View</h1>
+  <HeroSectionforPages
+    :sub-header="'Awards'"
+    :src-image="'AboutView/header-bg.jpg'"
+    :overlay="true"
+  />
 </template>
