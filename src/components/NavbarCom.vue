@@ -1,23 +1,52 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { onClickOutside, useScroll } from '@vueuse/core'
 
 const isMenuOpen = ref(false)
+const menuRef = ref(null)
+const hamburgerRef = ref(null)
+
+const { y } = useScroll(window)
+
+const navbarBackground = computed(() => {
+  return y.value > 0 || isMenuOpen.value ? 'bg-black' : 'bg-transparent'
+})
+
+const navbarStyle = computed(() => ({
+  height: y.value > 0 ? '4rem' : '5rem',
+  lineHeight: y.value > 0 ? '4rem' : '5rem'
+}))
+
+const handleMenuClick = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const handleOutsideClick = (event) => {
+  if (hamburgerRef.value && hamburgerRef.value.contains(event.target)) {
+    return
+  }
+
+  if (isMenuOpen.value) {
+    isMenuOpen.value = false
+  }
+}
+
+onClickOutside(menuRef, handleOutsideClick)
 </script>
 
 <template>
   <header
-    class="sticky lg:px-16 px-4 bg-black text-white flex flex-wrap items-center py-4 shadow-md"
+    :style="navbarStyle"
+    :class="[
+      'flex flex-wrap items-center px-4 text-white transition-all duration-300 lg:px-16',
+      navbarBackground
+    ]"
   >
-    <div class="flex-1 flex justify-between items-center">
+    <div class="flex h-full flex-1 items-center justify-between">
       <a href="#" class="text-xl">UMM</a>
     </div>
 
-    <!-- Hamburger icon -->
-    <button
-      for="menu-toggle"
-      class="pointer-cursor md:hidden block"
-      @click="isMenuOpen = !isMenuOpen"
-    >
+    <button ref="hamburgerRef" class="pointer-cursor block md:hidden" @click="handleMenuClick">
       <svg
         class="fill-current text-gray-200"
         xmlns="http://www.w3.org/2000/svg"
@@ -30,49 +59,48 @@ const isMenuOpen = ref(false)
       </svg>
     </button>
 
-    <!-- Responsive menu -->
     <div
+      ref="menuRef"
       :class="isMenuOpen ? 'block' : 'hidden'"
-      class="md:flex md:items-center md:w-auto w-full absolute top-14 left-0 bg-black z-50 md:static"
+      class="absolute left-0 top-14 z-50 w-full md:static md:flex md:w-auto md:items-center"
       id="menu"
     >
       <nav>
         <ul
-          class="md:flex items-center justify-between text-base text-gray-300 pt-4 md:pt-0 ml-4 md:ml-0"
+          class="ml-4 items-center justify-between pt-4 text-base text-gray-300 md:ml-0 md:flex md:pt-0"
         >
-          <!-- Margin-left added only for small devices -->
           <li>
             <a
               href="/"
-              class="hover:text-white md:p-4 py-3 px-0 block transition duration-500 ease-in-out"
+              class="block px-0 py-3 transition duration-500 ease-in-out hover:text-white md:p-4"
               >Home</a
             >
           </li>
           <li>
             <a
               href="about"
-              class="hover:text-white md:p-4 py-3 px-0 block transition duration-500 ease-in-out"
+              class="block px-0 py-3 transition duration-500 ease-in-out hover:text-white md:p-4"
               >About</a
             >
           </li>
           <li>
             <a
               href="awards"
-              class="hover:text-white md:p-4 py-3 px-0 block transition duration-500 ease-in-out"
+              class="block px-0 py-3 transition duration-500 ease-in-out hover:text-white md:p-4"
               >Awards</a
             >
           </li>
           <li>
             <a
               href="performance"
-              class="hover:text-white md:p-4 py-3 px-0 block transition duration-500 ease-in-out"
+              class="block px-0 py-3 transition duration-500 ease-in-out hover:text-white md:p-4"
               >Performance</a
             >
           </li>
           <li>
             <a
               href="magazine"
-              class="hover:text-white md:p-4 py-3 px-0 block transition duration-500 ease-in-out md:mb-0 mb-2"
+              class="mb-2 block px-0 py-3 transition duration-500 ease-in-out hover:text-white md:mb-0 md:p-4"
               >Magazine</a
             >
           </li>
@@ -81,3 +109,4 @@ const isMenuOpen = ref(false)
     </div>
   </header>
 </template>
+

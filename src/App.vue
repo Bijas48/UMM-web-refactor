@@ -4,6 +4,9 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <NavbarCom />
-  <RouterView />
+  <div class="relative min-h-screen">
+    <NavbarCom class="fixed left-0 right-0 top-0 z-50" />
+    <RouterView />
+  </div>
 </template>
+

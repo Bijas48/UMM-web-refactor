@@ -3,19 +3,21 @@ import bg_hero from '@/assets/images/HomeView/bg-web.png'
 </script>
 
 <template>
-  <section class="bg-center bg-cover bg-no-repeat" :style="{ backgroundImage: `url(${bg_hero})` }">
-    <!-- <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"> -->
+  <section
+    class="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
+    :style="{ backgroundImage: `url(${bg_hero})` }"
+  >
     <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:items-center">
       <div class="mx-auto max-w-xl text-center">
-        <h1 class="text-white text-3xl font-extrabold sm:text-5xl sm:mb-3 lg:text-6xl">
+        <h1 class="text-3xl font-extrabold text-white sm:mb-3 sm:text-5xl lg:text-6xl">
           GREAT SOURCE
         </h1>
         <h1
-          class="text-white text-3xl my-3 font-extrabold sm:text-5xl sm:my-5 lg:text-6xl lg:my-11"
+          class="my-3 text-3xl font-extrabold text-white sm:my-5 sm:text-5xl lg:my-11 lg:text-6xl"
         >
           GREAT ENERGY
         </h1>
-        <h1 class="text-white text-3xl font-extrabold sm:text-5xl sm:mt-3 lg:text-6xl">
+        <h1 class="text-3xl font-extrabold text-white sm:mt-3 sm:text-5xl lg:text-6xl">
           GREAT FUTURE
         </h1>
 
@@ -38,3 +40,4 @@ import bg_hero from '@/assets/images/HomeView/bg-web.png'
     </div>
   </section>
 </template>
+
