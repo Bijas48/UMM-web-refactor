@@ -1,5 +1,13 @@
-<script setup></script>
+<script setup>
+import HeroSectionforPages from '@/components/HeroSectionforPages.vue'
+import FooterCom from '@/components/FooterCom.vue'
+</script>
 
 <template>
-  <h1>Testing Performance View</h1>
+  <HeroSectionforPages
+    :sub-header="'Performance'"
+    :src-image="'AboutView/header-bg.jpg'"
+    :overlay="true"
+  />
+  <FooterCom />
 </template>

@@ -1,11 +1,11 @@
 [
   {
-    "imgPath": "/src/assets/images/AwardsView/iso.webp",
+    "imgPath": "src/assets/images/AwardsView/iso.webp",
     "title": "QUALITY MANAGEMENT SYSTEM",
     "year": "ISO 9001:2015"
   },
   {
-    "imgPath": "/src/assets/images/AwardsView/rmk-energy.webp",
+    "imgPath": "src/assets/images/AwardsView/rmk-energy.webp",
     "title": "5 YEARS COOPERATIONS RMK ENERGY",
     "year": "(2014-2019)"
   },
@@ -15,32 +15,32 @@
     "year": "2019"
   },
   {
-    "imgPath": "src/assets/images/awardsView/best-partner.webp",
+    "imgPath": "src/assets/images/AwardsView/best-partner.webp",
     "title": "BEST PARTNER PLNBB",
     "year": "2019"
   },
   {
-    "imgPath": "src/assets/images/awardsView/best-performance.webp",
+    "imgPath": "src/assets/images/AwardsView/best-performance.webp",
     "title": "BEST PERFORMANCE PARTNER SUPPLIER PLNBB",
     "year": "2021"
   },
   {
-    "imgPath": "src/assets/images/awardsView/top-3-mrc.webp",
+    "imgPath": "src/assets/images/AwardsView/top-3-mrc.webp",
     "title": "TOP 3 BEST MRC/HRC QUALITY & QUANTITY",
     "year": "2021"
   },
   {
-    "imgPath": "src/assets/images/awardsView/top-3-lrc.webp",
+    "imgPath": "src/assets/images/AwardsView/top-3-lrc.webp",
     "title": "TOP 3 BEST LRC QUALITY VOL>1 MILION TON",
     "year": "2020"
   },
   {
-    "imgPath": "src/assets/images/awardsView/top-3-quality.webp",
+    "imgPath": "src/assets/images/AwardsView/top-3-quality.webp",
     "title": "TOP 3 BEST LRC QUALITY & QUANTITY VOL. 500.000 TON",
     "year": "2021"
   },
   {
-    "imgPath": "src/assets/images/awardsView/top-3-supplier.webp",
+    "imgPath": "src/assets/images/AwardsView/top-3-supplier.webp",
     "title": "TOP 3 SUPPLIERS EXCELLENT AVERAGE PERFORMANCE",
     "year": "2021"
   }
