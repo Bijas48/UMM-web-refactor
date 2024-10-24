@@ -31,7 +31,7 @@ import section3Image from '@/assets/images/AboutView/section-3.jpg'
 
       <hr class="my-9 border-gray-300" />
 
-      <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-8 p-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-8 p-6 animate-fadeinright">
         <div class="flex justify-center items-center">
           <img
             :src="section2Image"
@@ -56,7 +56,7 @@ import section3Image from '@/assets/images/AboutView/section-3.jpg'
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-8 p-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-8 p-6 animate-fadeinleft">
         <div class="flex justify-center items-center md:order-last">
           <img
             :src="section3Image"
