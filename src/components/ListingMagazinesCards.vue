@@ -5,7 +5,9 @@ import magazines from '@/assets/data/magazines.json'
 <template>
   <section class="my-16">
     <div class="container mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-6 p-6 pt-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-6 p-6 pt-10 animate-fadeinup"
+      >
         <div v-for="(magazine, index) in magazines" :key="index" class="rounded-lg max-w-96">
           <!-- Image -->
           <div>

@@ -12,9 +12,8 @@ import listKiri from '@/assets/images/PerformanceView/sumatera.png'
         </h2>
         <div class="border shadow-lg">
           <iframe
-            class="w-full p-6"
+            class="w-full p-6 h-[80vh]"
             src="https://www.google.com/maps/d/u/0/embed?mid=1MaCcGEoKEJ1Bkllw5KrgGKssk03S-28&ehbc=2E312F&noprof=1"
-            height="480"
           ></iframe>
         </div>
       </div>

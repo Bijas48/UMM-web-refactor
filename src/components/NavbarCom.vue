@@ -6,7 +6,7 @@ const isMenuOpen = ref(false)
 
 <template>
   <header
-    class="sticky lg:px-16 px-4 bg-black text-white flex flex-wrap items-center py-4 shadow-md"
+    class="relative lg:px-16 px-4 bg-black text-white flex flex-wrap items-center py-4 shadow-md"
   >
     <div class="flex-1 flex justify-between items-center">
       <a href="#" class="text-xl">UMM</a>

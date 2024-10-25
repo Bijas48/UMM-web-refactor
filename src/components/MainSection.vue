@@ -9,7 +9,7 @@ import mainPhoto3 from '@/assets/images/HomeView/index3.jpg'
 
 <template>
   <section id="mainSection" class="py-12 mt-5">
-    <div class="container mx-auto">
+    <div class="container mx-auto animate-showupclock">
       <div class="flex flex-wrap justify-center">
         <div class="w-full lg:w-2/3 text-center">
           <h2 class="text-3xl font-bold mb-11">
@@ -23,6 +23,7 @@ import mainPhoto3 from '@/assets/images/HomeView/index3.jpg'
           </p>
         </div>
       </div>
+
       <div class="flex justify-center mt-8">
         <a href="#Product" class="text-4xl text-gray-700 hover:text-red-500 transition"
           ><i class="fa fa-angle-down"></i
