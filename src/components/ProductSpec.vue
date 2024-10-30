@@ -1,20 +1,44 @@
 <script setup>
 import productGif from '@/assets/images/HomeView/index5.gif'
 import { Icon } from '@iconify/vue'
+import { ref } from 'vue'
+import { useIntersectionObserver } from '@vueuse/core'
+
+const animatedElement = ref(null)
+const isVisible = ref(false)
+
+useIntersectionObserver(animatedElement, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    isVisible.value = true
+  }
+})
 </script>
 
 <template>
   <section id="Product" class="py-16">
-    <div class="container mx-auto">
+    <div
+      ref="animatedElement"
+      :class="{
+        'animate-showupclock': isVisible,
+        'md:animate-none': !isVisible
+      }"
+      class="container mx-auto"
+    >
       <!-- Title and Subtitle -->
       <div class="flex flex-col items-center">
         <h2 class="text-3xl font-semibold text-gray-800 mb-4">Product Specification</h2>
         <div class="text-lg font-serif mb-8"></div>
       </div>
       <!-- Features Row -->
-      <div class="flex flex-wrap justify-between">
+      <div class="flex flex-wrap justify-around">
         <!-- Left Column -->
-        <div class="grid w-full md:w-1/3 lg:w-1/4 content-evenly">
+        <div
+          :class="{
+            'animate-slideinleft': isVisible,
+            'md:animate-none': !isVisible
+          }"
+          class="grid w-full md:w-1/3 lg:w-1/4 content-evenly"
+        >
           <div class="flex flex-col md:flex-row items-center mb-4">
             <div class="text-4xl md:mr-4 mb-2 md:mb-0">
               <Icon icon="et:map-pin" class="w-10 h-10" />
@@ -45,7 +69,13 @@ import { Icon } from '@iconify/vue'
         </div>
 
         <!-- Right Column -->
-        <div class="grid w-full md:w-1/3 lg:w-1/4 content-evenly">
+        <div
+          :class="{
+            'animate-slideinright': isVisible,
+            'md:animate-none': !isVisible
+          }"
+          class="grid w-full md:w-1/3 lg:w-1/4 content-evenly"
+        >
           <div class="flex flex-col md:flex-row items-center mb-4">
             <div class="text-4xl md:mr-4 mb-2 md:mb-0">
               <Icon icon="et:global" class="w-10 h-10" />

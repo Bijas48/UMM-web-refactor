@@ -3,10 +3,9 @@ import awards from '@/assets/data/awards.json'
 </script>
 
 <template>
-  <!--Listing Awards-->
   <section class="my-16">
     <div class="container mx-auto">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 animate-fadeinup">
         <div v-for="(award, index) in awards" :key="index" class="p-4">
           <img
             :src="award.imgPath"
