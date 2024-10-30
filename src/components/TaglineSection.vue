@@ -1,7 +1,4 @@
 <script setup>
-import { ref } from 'vue'
-import { useIntersectionObserver } from '@vueuse/core'
-
 defineProps({
   tagline: {
     type: String,
@@ -10,15 +7,6 @@ defineProps({
   srcImage: {
     type: String,
     default: 'HomeView/index4.jpg'
-  }
-})
-
-const animatedElement = ref(null)
-const isVisible = ref(false)
-
-useIntersectionObserver(animatedElement, ([{ isIntersecting }]) => {
-  if (isIntersecting) {
-    isVisible.value = true
   }
 })
 </script>
@@ -33,11 +21,15 @@ useIntersectionObserver(animatedElement, ([{ isIntersecting }]) => {
 
     <div class="relative py-36">
       <div
-        ref="animatedElement"
-        :class="{
-          'animate-showupclock': isVisible
+        v-motion
+        :initial="{ opacity: 0, y: 100 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :variants="{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 100 }
         }"
-        class="container mx-auto transition-opacity duration-500"
+        :visible="{ opacity: 1, y: 0 }"
+        class="container mx-auto transition-opacity"
       >
         <div class="flex justify-center">
           <div class="text-center">

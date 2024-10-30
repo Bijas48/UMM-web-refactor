@@ -5,7 +5,17 @@ import awards from '@/assets/data/awards.json'
 <template>
   <section class="my-16">
     <div class="container mx-auto">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 animate-fadeinup">
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 100 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :variants="{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 100 }
+        }"
+        :visible="{ opacity: 1, y: 0 }"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6"
+      >
         <div v-for="(award, index) in awards" :key="index" class="p-4">
           <img
             :src="award.imgPath"

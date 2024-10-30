@@ -2,9 +2,9 @@
 
 <template>
   <div class="bg-black pt-8">
-    <div class="container mx-auto">
+    <div class="container mx-auto" v-motion-slide-visible-bottom>
       <div class="flex flex-wrap">
-        <div class="w-full md:w-1/3 p-4">
+        <div class="w-full p-4 md:w-1/3">
           <div class="widget">
             <h5 class="font-alt text-xl text-white">About UMM</h5>
             <p class="text-gray-300">
@@ -17,10 +17,10 @@
             </p>
           </div>
         </div>
-        <div class="w-full md:w-1/3 p-4">
+        <div class="w-full p-4 md:w-1/3">
           <!-- You can add content here if needed -->
         </div>
-        <div class="w-full md:w-1/3 p-4">
+        <div class="w-full p-4 md:w-1/3">
           <div class="widget">
             <h5 class="font-alt text-xl text-white">Contact Us</h5>
             <p class="text-gray-300">
@@ -37,10 +37,10 @@
         </div>
       </div>
     </div>
-    <hr class="border-gray-700 my-4" />
-    <footer class="bg-black">
+    <hr class="my-4 border-gray-700" />
+    <footer class="bg-black" v-motion-slide-visible-bottom>
       <div class="container mx-auto">
-        <div class="flex justify-center md:justify-between items-center py-4 px-5">
+        <div class="flex items-center justify-center px-5 py-4 md:justify-between">
           <div>
             <p class="text-gray-300">
               &copy; 2024&nbsp;<a href="/" class="text-gray-400 hover:underline">UMM</a>, All Rights
@@ -50,8 +50,5 @@
         </div>
       </div>
     </footer>
-    <div class="scroll-up fixed bottom-4 right-4">
-      <a href="#totop" class="text-white"><i class="fa fa-angle-double-up"></i></a>
-    </div>
   </div>
 </template>

@@ -1,31 +1,23 @@
 <script setup>
 import productGif from '@/assets/images/HomeView/index5.gif'
 import { Icon } from '@iconify/vue'
-import { ref } from 'vue'
-import { useIntersectionObserver } from '@vueuse/core'
-
-const animatedElement = ref(null)
-const isVisible = ref(false)
-
-useIntersectionObserver(animatedElement, ([{ isIntersecting }]) => {
-  if (isIntersecting) {
-    isVisible.value = true
-  }
-})
 </script>
 
 <template>
   <section id="Product" class="py-16">
-    <div
-      ref="animatedElement"
-      :class="{
-        'animate-showupclock': isVisible,
-        'md:animate-none': !isVisible
-      }"
-      class="container mx-auto"
-    >
+    <div class="container mx-auto">
       <!-- Title and Subtitle -->
-      <div class="flex flex-col items-center">
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 100 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :variants="{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 100 }
+        }"
+        :visible="{ opacity: 1, y: 0 }"
+        class="flex flex-col items-center"
+      >
         <h2 class="text-3xl font-semibold text-gray-800 mb-4">Product Specification</h2>
         <div class="text-lg font-serif mb-8"></div>
       </div>
@@ -33,10 +25,14 @@ useIntersectionObserver(animatedElement, ([{ isIntersecting }]) => {
       <div class="flex flex-wrap justify-around">
         <!-- Left Column -->
         <div
-          :class="{
-            'animate-slideinleft': isVisible,
-            'md:animate-none': !isVisible
+          v-motion
+          :initial="{ opacity: 0, x: -100 }"
+          :enter="{ opacity: 1, x: 0 }"
+          :variants="{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: -100 }
           }"
+          :visible="{ opacity: 1, x: 0 }"
           class="grid w-full md:w-1/3 lg:w-1/4 content-evenly"
         >
           <div class="flex flex-col md:flex-row items-center mb-4">
@@ -62,7 +58,7 @@ useIntersectionObserver(animatedElement, ([{ isIntersecting }]) => {
         </div>
 
         <!-- Image in Center -->
-        <div class="hidden md:block w-full md:w-1/3 lg:w-2/5">
+        <div class="hidden md:block w-full md:w-1/3 lg:w-2/5" v-motion-pop-visible>
           <div class="grid place-content-center h-full">
             <img :src="productGif" alt="Feature Image" />
           </div>
@@ -70,10 +66,14 @@ useIntersectionObserver(animatedElement, ([{ isIntersecting }]) => {
 
         <!-- Right Column -->
         <div
-          :class="{
-            'animate-slideinright': isVisible,
-            'md:animate-none': !isVisible
+          v-motion
+          :initial="{ opacity: 0, x: 100 }"
+          :enter="{ opacity: 1, x: 0 }"
+          :variants="{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: 100 }
           }"
+          :visible="{ opacity: 1, x: 0 }"
           class="grid w-full md:w-1/3 lg:w-1/4 content-evenly"
         >
           <div class="flex flex-col md:flex-row items-center mb-4">

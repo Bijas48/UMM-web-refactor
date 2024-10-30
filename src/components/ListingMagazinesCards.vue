@@ -6,7 +6,15 @@ import magazines from '@/assets/data/magazines.json'
   <section class="my-16">
     <div class="container mx-auto">
       <div
-        class="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-6 p-6 pt-10 animate-fadeinup"
+        v-motion
+        :initial="{ opacity: 0, y: 100 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :variants="{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 100 }
+        }"
+        :visible="{ opacity: 1, y: 0 }"
+        class="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-6 p-6 pt-10"
       >
         <div v-for="(magazine, index) in magazines" :key="index" class="rounded-lg max-w-96">
           <!-- Image -->

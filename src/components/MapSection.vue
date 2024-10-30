@@ -6,7 +6,17 @@ import listKiri from '@/assets/images/PerformanceView/sumatera.png'
 <template>
   <section class="my-16">
     <div class="container mx-auto">
-      <div class="w-full animate-showupclock">
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 100 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :variants="{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 100 }
+        }"
+        :visible="{ opacity: 1, y: 0 }"
+        class="w-full"
+      >
         <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 text-center my-6">
           MAP LOCATION - INDONESIA
         </h2>
@@ -18,7 +28,17 @@ import listKiri from '@/assets/images/PerformanceView/sumatera.png'
         </div>
       </div>
 
-      <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 100 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :variants="{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 100 }
+        }"
+        :visible="{ opacity: 1, y: 0 }"
+        class="w-full grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
         <div class="px-8 pb-2 pt-6 md:py-8 justify-items-center">
           <img class="w-96" :src="listKiri" alt="List Sumatera" />
         </div>

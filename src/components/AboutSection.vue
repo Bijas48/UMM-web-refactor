@@ -7,43 +7,57 @@ import section3Image from '@/assets/images/AboutView/section-3.jpg'
 <template>
   <section class="py-16">
     <div class="container mx-auto">
-      <div class="flex flex-col w-full items-center animate-showupclock">
-        <h2 class="text-3xl font-semibold text-gray-800 text-center my-6">TEAM OF MANAGEMENT</h2>
-        <!-- Gambar dummy -->
-        <!-- <img
-          src="https://via.placeholder.com/1200x600"
-          class="w-full h-auto"
+      <!-- Section 1 -->
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 100 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :variants="{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 100 }
+        }"
+        :visible="{ opacity: 1, y: 0 }"
+        class="w-full"
+      >
+        <h2 class="my-6 text-center text-3xl font-semibold text-gray-800">TEAM OF MANAGEMENT</h2>
+        <img
+          :src="section1Image"
+          class="aspect-[7/6] w-full rounded-lg object-cover shadow-lg md:aspect-[16/9]"
           alt="Management Team Image"
-        /> -->
-        <div class="grid w-5/6">
-          <img
-            :src="section1Image"
-            class="w-full md:aspect-[16/9] aspect-[7/6] object-cover rounded-lg shadow-lg"
-            alt="Management Team Image"
-          />
-        </div>
+        />
       </div>
 
       <hr class="my-9 border-gray-300" />
 
-      <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-8 p-6 animate-fadeinright">
-        <div class="flex justify-center items-center">
+      <!-- Section 2 -->
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 100 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :variants="{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 100 }
+        }"
+        :visible="{ opacity: 1, y: 0 }"
+        class="grid w-full grid-cols-1 gap-8 p-6 md:grid-cols-2"
+      >
+        <div class="flex items-center justify-center">
           <img
             :src="section2Image"
             alt="Company Overview"
-            class="w-full h-auto object-cover rounded-lg shadow-lg"
+            class="h-auto w-full rounded-lg object-cover shadow-lg"
           />
         </div>
         <div class="flex flex-col justify-center">
-          <h2 class="text-3xl font-semibold text-gray-800 mb-4">Overview</h2>
-          <div class="text-base font-serif text-gray-600">
+          <h2 class="mb-4 text-3xl font-semibold text-gray-800">Overview</h2>
+          <div class="font-serif text-base text-gray-600">
             <p class="text-justify">
               PT. Usaha Maju Makmur is a coal trading company based in Jakarta. Initially, this
               company was established in June 2010. As a growing company, we have established
               partnerships with a number of qualified mining companies, particularly within South
               Sumatera, Jambi, South Kalimantan, East Kalimantan, and Bengkulu, Indonesia.
             </p>
-            <p class="text-justify mt-4">
+            <p class="mt-4 text-justify">
               PT. Usaha Maju Makmur has the purpose of expanding the market potential, followed by
               an improvement of the product in terms of both its quality and quantity.
             </p>
@@ -51,25 +65,36 @@ import section3Image from '@/assets/images/AboutView/section-3.jpg'
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-8 p-6 animate-fadeinleft">
-        <div class="flex justify-center items-center md:order-last">
+      <!-- Section 3 -->
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 100 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :variants="{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 100 }
+        }"
+        :visible="{ opacity: 1, y: 0 }"
+        class="grid w-full grid-cols-1 gap-8 p-6 md:grid-cols-2"
+      >
+        <div class="flex items-center justify-center md:order-last">
           <img
             :src="section3Image"
             alt="Mission and Vision"
-            class="w-full h-auto object-cover rounded-lg shadow-lg"
+            class="h-auto w-full rounded-lg object-cover shadow-lg"
           />
         </div>
         <div class="flex flex-col justify-center">
-          <h2 class="text-3xl font-semibold text-gray-800 mb-4">Mission & Vision</h2>
-          <div class="text-base font-serif text-gray-600">
+          <h2 class="mb-4 text-3xl font-semibold text-gray-800">Mission & Vision</h2>
+          <div class="font-serif text-base text-gray-600">
             <p class="font-bold text-gray-800">OUR MISSION</p>
-            <p class="text-justify mt-2">
+            <p class="mt-2 text-justify">
               Menjadi perusahaan perdagangan batu bara yang memiliki integritas tinggi dan diakui
               secara global serta bertanggung jawab terhadap lingkungan.
             </p>
 
-            <p class="font-bold mt-6 text-gray-800">OUR VISION</p>
-            <ul class="list-disc ml-6 mt-2 space-y-2">
+            <p class="mt-6 font-bold text-gray-800">OUR VISION</p>
+            <ul class="ml-6 mt-2 list-disc space-y-2">
               <li class="text-justify">
                 Menyediakan produk berkualitas dari sumber yang dapat dipercaya untuk klien
                 terpercaya.
