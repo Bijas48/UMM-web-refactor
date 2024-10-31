@@ -18,11 +18,11 @@ import { Icon } from '@iconify/vue'
         :visible="{ opacity: 1, y: 0 }"
         class="flex flex-col items-center"
       >
-        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Product Specification</h2>
-        <div class="text-lg font-serif mb-8"></div>
+        <h2 class="mb-4 text-3xl font-semibold text-gray-800">Product Specification</h2>
+        <div class="mb-8 font-serif text-lg"></div>
       </div>
       <!-- Features Row -->
-      <div class="flex flex-wrap justify-around">
+      <div class="flex flex-wrap justify-around text-sm">
         <!-- Left Column -->
         <div
           v-motion
@@ -33,24 +33,22 @@ import { Icon } from '@iconify/vue'
             hidden: { opacity: 0, x: -100 }
           }"
           :visible="{ opacity: 1, x: 0 }"
-          class="grid w-full md:w-1/3 lg:w-1/4 content-evenly"
+          class="grid w-full content-evenly md:w-1/3 lg:w-1/4"
         >
-          <div class="flex flex-col md:flex-row items-center mb-4">
-            <div class="text-4xl md:mr-4 mb-2 md:mb-0">
-              <Icon icon="et:map-pin" class="w-10 h-10" />
-              <!-- Set fixed size for icons -->
+          <div class="mb-4 flex flex-col items-center md:flex-row">
+            <div class="mb-2 text-4xl md:mb-0 md:mr-4">
+              <Icon icon="et:map-pin" class="h-10 w-10" />
             </div>
-            <p class="text-justify text-sm font-serif px-5">
+            <p class="px-5 text-justify font-serif">
               Our product is originated from its source in South Sumatera, Jambi, South Kalimantan,
               East Kalimantan, Bengkulu, Indonesia.
             </p>
           </div>
-          <div class="flex flex-col md:flex-row items-center mb-4">
-            <div class="text-4xl md:mr-4 mb-2 md:mb-0">
-              <Icon icon="et:lightbulb" class="w-10 h-10" />
-              <!-- Set fixed size for icons -->
+          <div class="mb-4 flex flex-col items-center md:flex-row">
+            <div class="mb-2 text-4xl md:mb-0 md:mr-4">
+              <Icon icon="et:lightbulb" class="h-10 w-10" />
             </div>
-            <p class="text-justify text-sm font-serif px-5">
+            <p class="px-5 text-justify font-serif">
               Our product is suitable for electrical power generator as well for industrial
               consumption, cement industry and chemical.
             </p>
@@ -58,8 +56,8 @@ import { Icon } from '@iconify/vue'
         </div>
 
         <!-- Image in Center -->
-        <div class="hidden md:block w-full md:w-1/3 lg:w-2/5" v-motion-pop-visible>
-          <div class="grid place-content-center h-full">
+        <div class="hidden w-full md:block md:w-1/3 lg:w-2/5" v-motion-pop-visible>
+          <div class="grid h-full place-content-center">
             <img :src="productGif" alt="Feature Image" />
           </div>
         </div>
@@ -74,24 +72,22 @@ import { Icon } from '@iconify/vue'
             hidden: { opacity: 0, x: 100 }
           }"
           :visible="{ opacity: 1, x: 0 }"
-          class="grid w-full md:w-1/3 lg:w-1/4 content-evenly"
+          class="grid w-full content-evenly md:w-1/3 lg:w-1/4"
         >
-          <div class="flex flex-col md:flex-row items-center mb-4">
-            <div class="text-4xl md:mr-4 mb-2 md:mb-0">
-              <Icon icon="et:global" class="w-10 h-10" />
-              <!-- Set fixed size for icons -->
+          <div class="mb-4 flex flex-col items-center md:flex-row">
+            <div class="mb-2 text-4xl md:mb-0 md:mr-4">
+              <Icon icon="et:global" class="h-10 w-10" />
             </div>
-            <p class="text-justify text-sm font-serif px-5">
+            <p class="px-5 text-justify font-serif">
               Indonesia is our biggest market. This is proven by the long-term contracts with our
               clients.
             </p>
           </div>
-          <div class="flex flex-col md:flex-row items-center mb-4">
-            <div class="text-4xl md:mr-4 mb-2 md:mb-0">
-              <Icon icon="et:linegraph" class="w-10 h-10" />
-              <!-- Set fixed size for icons -->
+          <div class="mb-4 flex flex-col items-center md:flex-row">
+            <div class="mb-2 text-4xl md:mb-0 md:mr-4">
+              <Icon icon="et:linegraph" class="h-10 w-10" />
             </div>
-            <p class="text-justify text-sm font-serif px-5">
+            <p class="px-5 text-justify font-serif">
               We always motivate ourselves to constantly improve the quality of our product and
               services in order to better meet our respected clients demand.
             </p>

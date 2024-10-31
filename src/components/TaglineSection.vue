@@ -13,7 +13,7 @@ defineProps({
 
 <template>
   <section
-    class="relative bg-fixed bg-center pt-0 pb-0"
+    class="relative bg-fixed bg-center pb-0 pt-0"
     :style="{ backgroundImage: `url(./src/assets/images/${srcImage})` }"
   >
     <!-- Overlay -->
@@ -36,8 +36,8 @@ defineProps({
             <span class="text-6xl text-white">❝</span>
           </div>
         </div>
-        <div class="flex justify-center mt-8">
-          <blockquote class="text-center text-white sm:text-2xl text-xl italic font-semibold px-5">
+        <div class="mt-8 flex justify-center">
+          <blockquote class="px-5 text-center text-xl font-semibold italic text-white sm:text-2xl">
             {{ tagline }}
           </blockquote>
         </div>

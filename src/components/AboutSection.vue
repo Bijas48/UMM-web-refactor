@@ -17,14 +17,16 @@ import section3Image from '@/assets/images/AboutView/section-3.jpg'
           hidden: { opacity: 0, y: 100 }
         }"
         :visible="{ opacity: 1, y: 0 }"
-        class="w-full"
+        class="flex w-full flex-col"
       >
         <h2 class="my-6 text-center text-3xl font-semibold text-gray-800">TEAM OF MANAGEMENT</h2>
-        <img
-          :src="section1Image"
-          class="aspect-[7/6] w-full rounded-lg object-cover shadow-lg md:aspect-[16/9]"
-          alt="Management Team Image"
-        />
+        <div class="flex items-center justify-center">
+          <img
+            :src="section1Image"
+            class="mx-12 aspect-[7/6] w-full max-w-xs rounded-lg object-cover shadow-lg transition-all duration-300 md:aspect-[16/9] md:w-auto md:max-w-md lg:w-full lg:max-w-full"
+            alt="Management Team Image"
+          />
+        </div>
       </div>
 
       <hr class="my-9 border-gray-300" />
@@ -50,7 +52,7 @@ import section3Image from '@/assets/images/AboutView/section-3.jpg'
         </div>
         <div class="flex flex-col justify-center">
           <h2 class="mb-4 text-3xl font-semibold text-gray-800">Overview</h2>
-          <div class="font-serif text-base text-gray-600">
+          <div class="font-serif text-base">
             <p class="text-justify">
               PT. Usaha Maju Makmur is a coal trading company based in Jakarta. Initially, this
               company was established in June 2010. As a growing company, we have established
@@ -86,7 +88,7 @@ import section3Image from '@/assets/images/AboutView/section-3.jpg'
         </div>
         <div class="flex flex-col justify-center">
           <h2 class="mb-4 text-3xl font-semibold text-gray-800">Mission & Vision</h2>
-          <div class="font-serif text-base text-gray-600">
+          <div class="font-serif text-base">
             <p class="font-bold text-gray-800">OUR MISSION</p>
             <p class="mt-2 text-justify">
               Menjadi perusahaan perdagangan batu bara yang memiliki integritas tinggi dan diakui

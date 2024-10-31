@@ -47,9 +47,13 @@ import mainPhoto3 from '@/assets/images/HomeView/index3.jpg'
             <div class="team-image relative">
               <img :src="mainPhoto1" alt="Client Photo" class="w-full rounded-lg object-cover" />
               <div
-                class="team-detail absolute inset-0 flex items-center justify-center text-white hover:bg-gray-800 hover:bg-opacity-50"
+                v-motion
+                :initial="{ opacity: 0, y: 10 }"
+                :enter="{ opacity: 0, y: 10 }"
+                :hovered="{ opacity: 1, y: 0, scale: 1 }"
+                class="team-detail absolute inset-0 flex items-center justify-center rounded-lg bg-gray-800 bg-opacity-50 text-white"
               >
-                <h5 class="font-alt border text-xl">OUR CLIENT</h5>
+                <h5 class="font-alt text-xl">OUR CLIENT</h5>
               </div>
             </div>
             <div class="team-descr mt-4 text-center">
@@ -64,6 +68,10 @@ import mainPhoto3 from '@/assets/images/HomeView/index3.jpg'
             <div class="team-image relative">
               <img :src="mainPhoto2" alt="Supplier Photo" class="w-full rounded-lg object-cover" />
               <div
+                v-motion
+                :initial="{ opacity: 0, y: 10 }"
+                :enter="{ opacity: 0, y: 10 }"
+                :hovered="{ opacity: 1, y: 0, scale: 1 }"
                 class="team-detail absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 text-white"
               >
                 <h5 class="font-alt text-xl">OUR SUPPLIER</h5>
@@ -81,6 +89,10 @@ import mainPhoto3 from '@/assets/images/HomeView/index3.jpg'
             <div class="team-image relative">
               <img :src="mainPhoto3" alt="Service Photo" class="w-full rounded-lg object-cover" />
               <div
+                v-motion
+                :initial="{ opacity: 0, y: 10 }"
+                :enter="{ opacity: 0, y: 10 }"
+                :hovered="{ opacity: 1, y: 0, scale: 1 }"
                 class="team-detail absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 text-white"
               >
                 <h5 class="font-alt text-xl">SCOPE OF SERVICE</h5>

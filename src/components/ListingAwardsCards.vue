@@ -5,28 +5,30 @@ import awards from '@/assets/data/awards.json'
 <template>
   <section class="my-16">
     <div class="container mx-auto">
-      <div
-        v-motion
-        :initial="{ opacity: 0, y: 100 }"
-        :enter="{ opacity: 1, y: 0 }"
-        :variants="{
-          visible: { opacity: 1, y: 0 },
-          hidden: { opacity: 0, y: 100 }
-        }"
-        :visible="{ opacity: 1, y: 0 }"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6"
-      >
-        <div v-for="(award, index) in awards" :key="index" class="p-4">
+      <div class="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3">
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 100 }"
+          :enter="{ opacity: 1, y: 0 }"
+          :variants="{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 100 }
+          }"
+          :visible="{ opacity: 1, y: 0 }"
+          v-for="(award, index) in awards"
+          :key="index"
+          class="p-4"
+        >
           <img
             :src="award.imgPath"
             :alt="award.title"
-            class="w-full h-auto object-cover rounded-t-lg"
+            class="h-auto w-full rounded-t-lg object-cover"
           />
           <div class="p-4">
-            <h3 class="text-lg font-font-serif font-bold text-gray-800 text-center">
+            <h3 class="text-center text-lg font-bold text-gray-800">
               {{ award.title }}
             </h3>
-            <h4 class="text-lg font-font-serif font-bold text-gray-800 text-center">
+            <h4 class="text-center text-lg font-bold text-gray-800">
               {{ award.year }}
             </h4>
           </div>

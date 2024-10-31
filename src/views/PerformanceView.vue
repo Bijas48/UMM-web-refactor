@@ -3,6 +3,7 @@ import HeroSectionforPages from '@/components/HeroSectionforPages.vue'
 import FooterCom from '@/components/FooterCom.vue'
 import MapSection from '@/components/MapSection.vue'
 import TaglineSection from '@/components/TaglineSection.vue'
+import TableSection from '@/components/TableSection.vue'
 </script>
 
 <template>
@@ -16,5 +17,6 @@ import TaglineSection from '@/components/TaglineSection.vue'
     :tagline="'Great Source. Great Energy. Great Future'"
     :srcImage="'PerformanceView/index6.jpg'"
   />
+  <TableSection />
   <FooterCom />
 </template>

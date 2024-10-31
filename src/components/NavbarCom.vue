@@ -56,7 +56,7 @@ onClickOutside(menuRef, handleOutsideClick)
       ref="menuRef"
       :class="[
         isMenuOpen ? 'block' : 'hidden',
-        'absolute left-0 top-14 z-50 w-full md:static md:flex md:w-auto md:items-center transition-all duration-300',
+        'absolute left-0 top-14 z-50 w-full transition-all duration-300 md:static md:flex md:w-auto md:items-center',
         navbarBackground
       ]"
       id="menu"
