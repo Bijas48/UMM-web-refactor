@@ -40,7 +40,9 @@ const chartOptions = ref({
       show: true
     },
     zoom: {
-      enabled: false
+      enabled: true,
+      type: 'x',
+      autoScaleYaxis: true
     }
   },
   responsive: [
@@ -142,6 +144,7 @@ const chartOptions = ref({
           }"
           :visible="{ opacity: 1, y: 0 }"
           id="chart"
+          class="p-8"
         >
           <ApexCharts type="bar" height="350" :options="chartOptions" :series="series"></ApexCharts>
         </div>
