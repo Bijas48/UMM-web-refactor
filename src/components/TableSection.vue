@@ -1,35 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 import ApexCharts from 'vue3-apexcharts'
+import tableBar from '@/assets/data/tableBar.json'
 
-const series = ref([
-  {
-    name: 'PT. Usaha Maju Makmur',
-    data: [null, null, null, null, null, null, null, 1558.877, 1484.162, 2188.003, 2, 2, 2]
-  },
-  {
-    name: 'PT. Buana Perkasa Sukses',
-    data: [null, null, null, null, null, null, null, 249.287, 182.874, 716.382, 2, 2, 2]
-  },
-  {
-    name: 'Merged',
-    data: [
-      229.654,
-      678.097,
-      697.434,
-      676.406,
-      835.09,
-      759.064,
-      1445.252,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ]
-  }
-])
+//Data table
+const series = ref(tableBar)
 
 const chartOptions = ref({
   chart: {
@@ -45,6 +20,7 @@ const chartOptions = ref({
       autoScaleYaxis: true
     }
   },
+  colors: ['rgba(255, 159, 64, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(255, 129, 98, 0.6)'],
   responsive: [
     {
       breakpoint: 1000,
@@ -77,6 +53,7 @@ const chartOptions = ref({
   },
   xaxis: {
     type: 'datetime',
+    //Tambahkan Tahun Bila ingin Menambahkan Data
     categories: [
       '2013',
       '2014',

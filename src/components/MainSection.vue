@@ -72,7 +72,7 @@ import mainPhoto3 from '@/assets/images/HomeView/index3.jpg'
                 :initial="{ opacity: 0, y: 10 }"
                 :enter="{ opacity: 0, y: 10 }"
                 :hovered="{ opacity: 1, y: 0, scale: 1 }"
-                class="team-detail absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 text-white"
+                class="team-detail absolute inset-0 flex items-center justify-center rounded-lg bg-gray-800 bg-opacity-50 text-white"
               >
                 <h5 class="font-alt text-xl">OUR SUPPLIER</h5>
               </div>
@@ -93,7 +93,7 @@ import mainPhoto3 from '@/assets/images/HomeView/index3.jpg'
                 :initial="{ opacity: 0, y: 10 }"
                 :enter="{ opacity: 0, y: 10 }"
                 :hovered="{ opacity: 1, y: 0, scale: 1 }"
-                class="team-detail absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 text-white"
+                class="team-detail absolute inset-0 flex items-center justify-center rounded-lg bg-gray-800 bg-opacity-50 text-white"
               >
                 <h5 class="font-alt text-xl">SCOPE OF SERVICE</h5>
               </div>
