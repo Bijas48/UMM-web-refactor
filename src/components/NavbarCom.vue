@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { onClickOutside, useScroll } from '@vueuse/core'
+import { RouterLink } from 'vue-router'
 
 const isMenuOpen = ref(false)
 const menuRef = ref(null)
@@ -36,7 +37,7 @@ onClickOutside(menuRef, handleOutsideClick)
     ]"
   >
     <div class="flex h-full flex-1 items-center justify-between">
-      <a href="#" class="text-xl">UMM</a>
+      <RouterLink to="/" class="text-xl">UMM</RouterLink>
     </div>
 
     <button ref="hamburgerRef" class="pointer-cursor block md:hidden" @click="handleMenuClick">
@@ -66,38 +67,38 @@ onClickOutside(menuRef, handleOutsideClick)
           class="ml-4 items-center justify-between pt-4 text-base text-gray-300 md:ml-0 md:flex md:pt-0"
         >
           <li>
-            <a
-              href="/"
+            <RouterLink
+              to="/"
               class="block px-0 py-3 transition duration-500 ease-in-out hover:text-white md:p-4"
-              >Home</a
+              >Home</RouterLink
             >
           </li>
           <li>
-            <a
-              href="about"
+            <RouterLink
+              to="/about"
               class="block px-0 py-3 transition duration-500 ease-in-out hover:text-white md:p-4"
-              >About</a
+              >About</RouterLink
             >
           </li>
           <li>
-            <a
-              href="awards"
+            <RouterLink
+              to="/awards"
               class="block px-0 py-3 transition duration-500 ease-in-out hover:text-white md:p-4"
-              >Awards</a
+              >Awards</RouterLink
             >
           </li>
           <li>
-            <a
-              href="performance"
+            <RouterLink
+              to="/performance"
               class="block px-0 py-3 transition duration-500 ease-in-out hover:text-white md:p-4"
-              >Performance</a
+              >Performance</RouterLink
             >
           </li>
           <li>
-            <a
-              href="magazine"
+            <RouterLink
+              to="/magazine"
               class="mb-2 block px-0 py-3 transition duration-500 ease-in-out hover:text-white md:mb-0 md:p-4"
-              >Magazine</a
+              >Magazine</RouterLink
             >
           </li>
         </ul>
