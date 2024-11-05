@@ -13,12 +13,16 @@ defineProps({
     default: false
   }
 })
+
+const resolveImagePath = (path) => {
+  return new URL(`../assets/images/${path}`, import.meta.url).href
+}
 </script>
 
 <template>
   <section
     class="relative bg-cover bg-center bg-no-repeat"
-    :style="{ backgroundImage: `url(./src/assets/images/${srcImage})` }"
+    :style="{ backgroundImage: `url(${resolveImagePath(srcImage)})` }"
   >
     <!-- Overlay: Only visible if 'overlay' prop is true -->
     <div v-if="overlay" class="absolute inset-0 z-10 bg-black bg-opacity-50"></div>

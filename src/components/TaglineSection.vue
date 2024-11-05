@@ -9,12 +9,16 @@ defineProps({
     default: 'HomeView/index4.jpg'
   }
 })
+
+const resolveImagePath = (path) => {
+  return new URL(`../assets/images/${path}`, import.meta.url).href
+}
 </script>
 
 <template>
   <section
     class="relative bg-fixed bg-center pb-0 pt-0"
-    :style="{ backgroundImage: `url(./src/assets/images/${srcImage})` }"
+    :style="{ backgroundImage: `url(${resolveImagePath(srcImage)})` }"
   >
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black opacity-60"></div>
