@@ -1,5 +1,27 @@
 <script setup>
-import magazines from '@/assets/data/magazines.json'
+import image1 from '@/assets/images/magazinesview/company-profile.webp'
+import image2 from '@/assets/images/magazinesview/company-profile-export.webp'
+import image3 from '@/assets/images/magazinesview/journey.webp'
+import image4 from '@/assets/images/magazinesview/journey-2.webp'
+
+const magazines = [
+  {
+    imgPath: image1,
+    linkDrive: 'https://drive.google.com/file/d/1ivgA0UoKZ_SEjmvaeqp_krxtS4fQ7tLx'
+  },
+  {
+    imgPath: image2,
+    linkDrive: 'https://drive.google.com/file/d/1TiwohE1-D3sLx7bspFjsVpONFSrx2Yuu'
+  },
+  {
+    imgPath: image3,
+    linkDrive: 'https://drive.google.com/file/d/1i7rPKtiLemOXzL9raWqjQ7PV0mpj8sPO'
+  },
+  {
+    imgPath: image4,
+    linkDrive: 'https://drive.google.com/open?id=1AIUZXlIgQxcvs5pRKEAAeyDThBxie5rH'
+  }
+]
 </script>
 
 <template>
@@ -20,7 +42,11 @@ import magazines from '@/assets/data/magazines.json'
           class="max-w-96 rounded-lg"
         >
           <div>
-            <img :src="magazine.img" alt="Magazine image" class="h-full rounded-sm object-cover" />
+            <img
+              :src="magazine.imgPath"
+              alt="Magazine image"
+              class="h-full rounded-sm object-cover"
+            />
           </div>
 
           <div class="p-10">
