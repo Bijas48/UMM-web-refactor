@@ -1,13 +1,13 @@
 <script setup>
-import image1 from '@/assets/images/awardsview/iso.webp'
-import image2 from '@/assets/images/awardsview/rmk-energy.webp'
-import image3 from '@/assets/images/awardsview/5-pemasok-terbaik.webp'
-import image4 from '@/assets/images/awardsview/best-partner.webp'
-import image5 from '@/assets/images/awardsview/best-performance.webp'
-import image6 from '@/assets/images/awardsview/top-3-mrc.webp'
-import image7 from '@/assets/images/awardsview/top-3-lrc.webp'
-import image8 from '@/assets/images/awardsview/top-3-quality.webp'
-import image9 from '@/assets/images/awardsview/top-3-supplier.webp'
+import image1 from '/src/assets/images/awardsview/iso.webp'
+import image2 from '/src/assets/images/awardsview/rmk-energy.webp'
+import image3 from '/src/assets/images/awardsview/5-pemasok-terbaik.webp'
+import image4 from '/src/assets/images/awardsview/best-partner.webp'
+import image5 from '/src/assets/images/awardsview/best-performance.webp'
+import image6 from '/src/assets/images/awardsview/top-3-mrc.webp'
+import image7 from '/src/assets/images/awardsview/top-3-lrc.webp'
+import image8 from '/src/assets/images/awardsview/top-3-quality.webp'
+import image9 from '/src/assets/images/awardsview/top-3-supplier.webp'
 
 const awards = [
   {
