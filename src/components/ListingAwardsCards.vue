@@ -59,7 +59,7 @@ const awards = [
 </script>
 
 <template>
-  <section class="my-16">
+  <section class="py-16 md:px-16">
     <div class="container mx-auto">
       <div class="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3">
         <div

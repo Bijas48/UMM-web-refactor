@@ -5,7 +5,7 @@ import section3Image from '/images/AboutView/section-3.jpg'
 </script>
 
 <template>
-  <section class="py-16">
+  <section class="py-16 md:px-16">
     <div class="container mx-auto">
       <!-- Section 1 -->
       <div
