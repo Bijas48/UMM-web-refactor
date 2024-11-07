@@ -1,6 +1,6 @@
 <script setup>
-import listKanan from '/images/PerformanceView/jawkal.png'
-import listKiri from '/images/PerformanceView/sumatera.png'
+import listKanan from '@/assets/images/PerformanceView/jawkal.png'
+import listKiri from '@/assets/images/PerformanceView/sumatera.png'
 </script>
 
 <template>

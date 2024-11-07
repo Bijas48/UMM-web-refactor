@@ -1,5 +1,5 @@
 <script setup>
-import productGif from '/images/HomeView/index5.gif'
+import productGif from '@/assets/images/HomeView/index5.gif'
 import { Icon } from '@iconify/vue'
 </script>
 

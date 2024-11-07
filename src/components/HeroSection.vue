@@ -1,5 +1,5 @@
 <script setup>
-import bg_hero from '/images/HomeView/bg-web.png'
+import bg_hero from '@/assets/images/HomeView/bg-web.png'
 </script>
 
 <template>

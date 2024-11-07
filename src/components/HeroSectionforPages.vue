@@ -14,12 +14,12 @@ defineProps({
   }
 })
 
-// const resolveImagePath = (path) => {
-//   return new URL(`../assets/images/${path}`, import.meta.url).href
-// }
 const resolveImagePath = (path) => {
-  return `/images/${path}`
+  return new URL(`../assets/images/${path}`, import.meta.url).href
 }
+// const resolveImagePath = (path) => {
+//   return `/images/${path}`
+// }
 </script>
 
 <template>

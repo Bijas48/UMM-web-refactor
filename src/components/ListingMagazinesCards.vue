@@ -1,8 +1,8 @@
 <script setup>
-import image1 from '/images/MagazinesView/company-profile.webp'
-import image2 from '/images/MagazinesView/company-profile-export.webp'
-import image3 from '/images/MagazinesView/journey.webp'
-import image4 from '/images/MagazinesView/journey-2.webp'
+import image1 from '@/assets/images/MagazinesView/company-profile.webp'
+import image2 from '@/assets/images/MagazinesView/company-profile-export.webp'
+import image3 from '@/assets/images/MagazinesView/journey.webp'
+import image4 from '@/assets/images/MagazinesView/journey-2.webp'
 
 const magazines = [
   {

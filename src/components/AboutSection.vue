@@ -1,7 +1,7 @@
 <script setup>
-import section1Image from '/images/AboutView/section-1.jpg'
-import section2Image from '/images/AboutView/section-2.jpg'
-import section3Image from '/images/AboutView/section-3.jpg'
+import section1Image from '@/assets/images/AboutView/section-1.jpg'
+import section2Image from '@/assets/images/AboutView/section-2.jpg'
+import section3Image from '@/assets/images/AboutView/section-3.jpg'
 </script>
 
 <template>

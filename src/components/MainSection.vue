@@ -1,8 +1,8 @@
 <script setup>
 import logo_umm from '@/assets/images/logo/umm.png'
-import mainPhoto1 from '/images/HomeView/index1.jpg'
-import mainPhoto2 from '/images/HomeView/index2.jpg'
-import mainPhoto3 from '/images/HomeView/index3.jpg'
+import mainPhoto1 from '@/assets/images/HomeView/index1.jpg'
+import mainPhoto2 from '@/assets/images/HomeView/index2.jpg'
+import mainPhoto3 from '@/assets/images/HomeView/index3.jpg'
 
 // import { ref } from 'vue'
 </script>
