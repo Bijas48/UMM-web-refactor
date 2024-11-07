@@ -25,7 +25,7 @@ const magazines = [
 </script>
 
 <template>
-  <section class="my-16">
+  <section class="py-16 md:px-16">
     <div class="container mx-auto">
       <div class="grid grid-cols-1 justify-items-center gap-6 p-6 pt-10 md:grid-cols-2">
         <div
